@@ -65,11 +65,14 @@ void call_fun(op_func, char *, char *, int, int);
 void pint(stack_t **, unsigned int);
 /*pop top*/
 void pop(stack_t **, unsigned int);
+
 void nop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 
 
 /*Error hanlding*/
 void error_out(unsigned int error_code, ...);
 void others_error(unsigned int error_code, ...);
+void add(stack_t **stack, unsigned int line_num);
 
 #endif /* MONTHY */

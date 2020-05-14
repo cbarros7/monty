@@ -68,7 +68,6 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 			cmd = cmd + 1;
 			error = -1;
 		}
-		
 		/*val is not a digit is the return value is 0*/
 		if (cmd == NULL)
 		{
