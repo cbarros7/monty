@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * pop_top - Adds a node to the stack.
+ * pop - Adds a node to the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
  */
-void pop_top(stack_t **stack, unsigned int line_number)
+void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 
@@ -20,11 +20,11 @@ void pop_top(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * print_top - Prints the top node of the stack.
+ * pint - Prints the top node of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
  */
-void print_top(stack_t **stack, unsigned int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 		error_out(6, line_number);
@@ -32,11 +32,11 @@ void print_top(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * add_to_stack - Adds a node to the stack.
+ * push- Adds a node to the stack.
  * @new_node: Pointer to the new node.
  * @ln: Interger representing the line number of of the opcode.
  */
-void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void push(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
@@ -54,11 +54,11 @@ void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 }
 
 /**
- * print_stack - Adds a node to the stack.
+ * pall - Adds a node to the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
  */
-void print_stack(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 

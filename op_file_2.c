@@ -15,9 +15,10 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 	int error;
 
 	instruction_t functions[] = {
-		{"push", add_to_stack},
-		{"pall", print_stack},
-		{"pint", print_top},
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
@@ -60,6 +61,9 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 	error = 1;
 	if (strcmp(op, "push") == 0)
 	{
+		/*val is not a digit is the return value is 0*/
+		if (cmd == NULL)
+			error_out(5, l_num);
 
 		for (i = 0; cmd[i] != '\0'; i++)
 		{
@@ -71,6 +75,8 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 		node = new_node(atoi(cmd) * error);
 		if (format == 0)
 			f(&node, l_num);
+		if (format == 1)
+			add_to_queue(&node, l_num);
 	}
 	else
 		f(&head, l_num);

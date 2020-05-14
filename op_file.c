@@ -10,12 +10,10 @@ void open_file(char *file_name)
 
 	if (file_name == NULL)
 		error_out(2, file_name);
-
 	/*Checks if the file exists*/
 	file_check = access(file_name, R_OK);
 	if (file_check == -1)
 		error_out(2, file_name);
-
 	fd = fopen(file_name, "r");
 	if (fd == NULL)
 		error_out(2, file_name);
@@ -37,7 +35,6 @@ void read_file(FILE *fd)
 
 	if (fd == NULL)
 		error_out(2, "file_name");
-
 	/*Read line by line*/
 	for (number_line = 1; getline(&lineprt, &n, fd) != EOF; number_line++)
 	{
@@ -45,7 +42,6 @@ void read_file(FILE *fd)
 	}
 	free(lineprt);
 }
-
 /**
  * interpret_line - interpret each line by separating it one by one
  * @string: String on the line to be read
@@ -55,7 +51,6 @@ void read_file(FILE *fd)
  * If the value is 1 --> Queue
  * Return: Returns 0 if the opcode is stack. 1 if queue.
  */
-
 int interpret_line(char *string, int line_number, int format)
 {
 	char *opcode;
@@ -64,17 +59,13 @@ int interpret_line(char *string, int line_number, int format)
 	/*Handle error*/
 	if (string == NULL)
 		error_out(4);
-
 	/*Read command line by line*/
-	opcode = strtok(string, " \t\n");
-
+	opcode = strtok(string, " \n");
 	/*hanlding blank lines*/
 	if (opcode == NULL)
 		return (format);
-
 	/*tokens*/
-	cmd = strtok(NULL, " \t\n");
-
+	cmd = strtok(NULL, " \n");
 	/*compare two strings --> return queue or stack*/
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
@@ -83,4 +74,3 @@ int interpret_line(char *string, int line_number, int format)
 	search_func(opcode, cmd, line_number, format);
 	return (format);
 }
-
