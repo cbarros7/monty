@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * error_out - Prints error messages
  * @error_code: The error codes are the following
@@ -31,9 +30,6 @@ void error_out(int error_code, ...)
 		case 5:
 			printf("L%d: usage: push integer\n", va_arg(ag, int));
 			break;
-		case 6:
-			printf("L%d: can't pint, stack empty\n",
-				va_arg(ag, int));
 		default:
 			break;
 	}

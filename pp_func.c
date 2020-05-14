@@ -26,7 +26,6 @@ void pop_top(stack_t **stack, unsigned int line_number)
  */
 void print_top(stack_t **stack, unsigned int line_number)
 {
-
 	if (stack == NULL || *stack == NULL)
 		error_out(6, line_number);
 	printf("%d\n", (*stack)->n);
@@ -98,3 +97,4 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 	tmp->next = *new_node;
 	(*new_node)->prev = tmp;
 }
+
