@@ -46,6 +46,7 @@ void others_error(int error_code, ...)
 	va_list ag;
 	char *opcode_error;
 	int l_num;
+
 	va_start(ag, error_code);
 	switch (error_code)
 	{
