@@ -1,4 +1,3 @@
-
 #include "monty.h"
 
 /**
@@ -7,7 +6,7 @@
  * @cmd: The possible value for the operation.
  * @l_num: Line number for the opcode.
  * @format: Format specifier:
- * If the value is 0 --> Stack 
+ * If the value is 0 --> Stack
  * If the value is 1 --> Queue
  */
 void search_func(char *opcode, char *cmd, int l_num, int format)
@@ -30,7 +29,7 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		return;
 
 	/*Search the list for the function to be used*/
-	for (error=1, pos = 0; functions[pos].opcode != NULL; pos++)
+	for (error = 1, pos = 0; functions[pos].opcode != NULL; pos++)
 	{
 		/*Correct opcode and didn't find any error*/
 		if (strcmp(opcode, functions[pos].opcode) == 0)
@@ -61,7 +60,7 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 	error = 1;
 	if (strcmp(op, "push") == 0)
 	{
-	
+
 		for (i = 0; cmd[i] != '\0'; i++)
 		{
 			if (isdigit(cmd[i]) == 0)
