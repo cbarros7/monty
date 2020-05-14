@@ -88,4 +88,3 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 	else
 		f(&head, l_num);
 }
-

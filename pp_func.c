@@ -61,7 +61,7 @@ void pall(stack_t **stack, unsigned int line_number)
 	tmp = *stack;
 	while (tmp != NULL)
 	{
-		printf("%d\n", tmp->n);
+		fprintf(stdout, "%d\n", tmp->n);
 		tmp = tmp->next;
 	}
 }
@@ -94,6 +94,5 @@ void pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 		others_error(6, line_number);
-	printf("%d/n", (*stack)->n);
+	fprintf(stdout, "%d/n", (*stack)->n);
 }
-
