@@ -17,7 +17,7 @@ void error_out(int error_code, ...)
 			break;
 		case 2:
 			printf("Error: Can't open file %s\n",
-				va_arg(ag, char *));
+					va_arg(ag, char *));
 			break;
 		case 3:
 			l_num = va_arg(ag, int);
