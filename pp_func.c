@@ -28,7 +28,7 @@ void print_top(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 		error_out(6, line_number);
-	printf("%d\n", (*stack)->n);
+	printf("%d/n", (*stack)->n);
 }
 
 /**
