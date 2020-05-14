@@ -1,7 +1,5 @@
 #include "monty.h"
 
-stack_t *head = NULL;
-
 /**
  * main - Entry to the program
  * @argc: Number of command line arguments.
@@ -18,3 +16,4 @@ int main(int argc, char **argv)
 	free_nodes();
 	return (0);
 }
+
