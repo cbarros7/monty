@@ -62,6 +62,13 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 	error = 1;
 	if (strcmp(op, "push") == 0)
 	{
+		/*Checks if the number is negative and moves the val ptr*/
+		if (cmd != NULL && cmd[0] == '-')
+		{
+			cmd = cmd + 1;
+			error = -1;
+		}
+		
 		/*val is not a digit is the return value is 0*/
 		if (cmd == NULL)
 		{
