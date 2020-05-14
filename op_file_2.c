@@ -39,7 +39,10 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		}
 	}
 	if (error == 1)
+	{
 		error_out(3, l_num, opcode);
+		exit(EXIT_FAILURE);
+	}
 }
 
 /**
@@ -62,12 +65,20 @@ void call_fun(op_func f, char *op, char *cmd, int l_num, int format)
 	{
 		/*val is not a digit is the return value is 0*/
 		if (cmd == NULL)
+		{
 			error_out(5, l_num);
+			exit(EXIT_FAILURE);
+		}
+			
 
 		for (i = 0; cmd[i] != '\0'; i++)
 		{
 			if (isdigit(cmd[i]) == 0)
+			{
 				error_out(5, l_num);
+				exit(EXIT_FAILURE);
+			}
+				
 		}
 
 		/*Create new node*/

@@ -13,22 +13,22 @@ void error_out(int error_code, ...)
 	switch (error_code)
 	{
 		case 1:
-			printf("USAGE: monty file\n");
+			fprintf(stderr, "USAGE: monty file\n");
 			break;
 		case 2:
-			printf("Error: Can't open file %s\n",
+			fprintf(stderr, "Error: Can't open file %s\n",
 					va_arg(ag, char *));
 			break;
 		case 3:
 			l_num = va_arg(ag, int);
 			opcode_error = va_arg(ag, char *);
-			printf("L%d: unknown instruction %s\n", l_num, opcode_error);
+			fprintf(stderr, "L%d: unknown instruction %s\n", l_num, opcode_error);
 			break;
 		case 4:
-			printf("Error: malloc failed\n");
+			fprintf(stderr, "Error: malloc failed\n");
 			break;
 		case 5:
-			printf("L%d: usage: push integer\n", va_arg(ag, int));
+			fprintf(stderr, "L%d: usage: push integer\n", va_arg(ag, int));
 			break;
 		default:
 			break;
