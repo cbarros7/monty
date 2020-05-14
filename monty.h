@@ -69,7 +69,7 @@ void nop(stack_t **stack, unsigned int line_number);
 
 
 /*Error hanlding*/
-void error_out(int error_code, ...);
-void others_error(int error_code, ...);
+void error_out(unsigned int error_code, ...);
+void others_error(unsigned int error_code, ...);
 
 #endif /* MONTHY */
