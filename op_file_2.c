@@ -21,7 +21,6 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		{"pop", pop},
 		{NULL, NULL}
 	};
-
 	/*
 	 *If the first character is a #... ignore that
 	 *error and continue to execute.
