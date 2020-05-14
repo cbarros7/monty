@@ -19,6 +19,9 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	/*
