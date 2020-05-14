@@ -99,5 +99,6 @@ void pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 		others_error(6, line_number);
-	fprintf(stdout, "%d/n", (*stack)->n);
+
+	printf("%d\n", (*stack)->n);
 }

@@ -55,22 +55,28 @@ int interpret_line(char *string, int line_number, int format)
 {
 	char *opcode;
 	char *cmd;
+	const char *delim;
 
+	delim = "\n ";
 	/*Handle error*/
+
 	if (string == NULL)
 		error_out(4);
 	/*Read command line by line*/
-	opcode = strtok(string, " \n");
+	opcode = strtok(string, delim);
+
 	/*hanlding blank lines*/
 	if (opcode == NULL)
 		return (format);
+
 	/*tokens*/
-	cmd = strtok(NULL, " \n");
+	cmd = strtok(NULL, delim);
 	/*compare two strings --> return queue or stack*/
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
 	else if (strcmp(opcode, "stack") == 0)
 		return (0);
+
 	search_func(opcode, cmd, line_number, format);
 	return (format);
 }
