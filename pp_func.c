@@ -3,11 +3,12 @@
 /**
  * add_to_queue - Adds a node to the queue.
  * @new_node: Pointer to the new node.
- * @ln: Interger representing the line number of of the opcode.
+ * @line_number: Interger representing the line number of of the opcode.
  */
-void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void add_to_queue(stack_t **new_node, unsigned int line_number)
 {
 	stack_t *tmp;
+	(void) line_number;
 
 	if (new_node == NULL || *new_node == NULL)
 		exit(EXIT_FAILURE);
@@ -27,11 +28,12 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 /**
  * push- Adds a node to the stack.
  * @new_node: Pointer to the new node.
- * @ln: Interger representing the line number of of the opcode.
+ * @line_number: Interger representing the line number of of the opcode.
  */
-void push(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void push(stack_t **new_node, unsigned int line_number)
 {
 	stack_t *tmp;
+	(void) line_number;
 
 	if (new_node == NULL || *new_node == NULL)
 		exit(EXIT_FAILURE);
@@ -40,10 +42,13 @@ void push(stack_t **new_node, __attribute__((unused))unsigned int ln)
 		head = *new_node;
 		return;
 	}
+
 	tmp = head;
+	tmp->prev = NULL;
 	head = *new_node;
 	head->next = tmp;
 	tmp->prev = head;
+
 }
 
 /**

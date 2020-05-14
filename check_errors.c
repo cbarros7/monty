@@ -22,13 +22,13 @@ void error_out(unsigned int error_code, ...)
 		case 3:
 			l_num = va_arg(ag, unsigned int);
 			opcode_error = va_arg(ag, char *);
-			fprintf(stderr, "L%d: unknown instruction %s\n", l_num, opcode_error);
+			fprintf(stderr, "L%u: unknown instruction %s\n", l_num, opcode_error);
 			break;
 		case 4:
 			fprintf(stderr, "Error: malloc failed\n");
 			break;
 		case 5:
-			fprintf(stderr, "L%d: usage: push integer\n", va_arg(ag, unsigned int));
+			fprintf(stderr, "L%u: usage: push integer\n", va_arg(ag, unsigned int));
 			break;
 		default:
 			break;
@@ -51,17 +51,17 @@ void others_error(unsigned int error_code, ...)
 	switch (error_code)
 	{
 		case 6:
-			fprintf(stderr, "L%d: can't pint, stack empty\n",
+			fprintf(stderr, "L%u: can't pint, stack empty\n",
 					va_arg(ag, unsigned int));
 			break;
 		case 7:
-			fprintf(stderr, "L%d: can't pop an empty stack\n",
+			fprintf(stderr, "L%u: can't pop an empty stack\n",
 					va_arg(ag, unsigned int));
 			break;
 		case 8:
 			l_num = va_arg(ag, unsigned int);
 			opcode_error = va_arg(ag, char *);
-			fprintf(stderr, "L%d: can't %s, stack too short\n", l_num, opcode_error);
+			fprintf(stderr, "L%u: can't %s, stack too short\n", l_num, opcode_error);
 			break;
 		default:
 			break;
