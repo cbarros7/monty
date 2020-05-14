@@ -3,7 +3,7 @@
 /**
  * new_node - Creates new node
  * @n: Number to go inside the node.
- * Return: new node. 
+ * Return: new node
  */
 stack_t *new_node(int n)
 {
@@ -39,3 +39,4 @@ void free_nodes(void)
 		free(tmp);
 	}
 }
+
