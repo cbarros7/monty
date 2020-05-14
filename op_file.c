@@ -24,7 +24,6 @@ void open_file(char *file_name)
 	/*might need to check for errors on closing a file.*/
 	fclose(fd);
 }
-
 /**
  * read_file - Reads the content of a file line by line.
  * @fd: Pointer to a file descriptor of an open file
@@ -48,14 +47,15 @@ void read_file(FILE *fd)
 }
 
 /**
- * interpret_line - interpret each line by separating it one by one with a token 
+ * interpret_line - interpret each line by separating it one by one
  * @string: String on the line to be read
  * @line_number: line number for the opcode.
  * @format: Format specifier:
- * If the value is 0 --> Stack 
+ * If the value is 0 --> Stack
  * If the value is 1 --> Queue
  * Return: Returns 0 if the opcode is stack. 1 if queue.
  */
+
 int interpret_line(char *string, int line_number, int format)
 {
 	char *opcode;
@@ -71,6 +71,7 @@ int interpret_line(char *string, int line_number, int format)
 	/*hanlding blank lines*/
 	if (opcode == NULL)
 		return (format);
+
 	/*tokens*/
 	cmd = strtok(NULL, " \t\n");
 
@@ -79,7 +80,7 @@ int interpret_line(char *string, int line_number, int format)
 		return (1);
 	else if (strcmp(opcode, "stack") == 0)
 		return (0);
-
 	search_func(opcode, cmd, line_number, format);
 	return (format);
 }
+
