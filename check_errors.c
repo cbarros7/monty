@@ -68,11 +68,6 @@ void others_error(unsigned int error_code, ...)
 			opcode_error = va_arg(ag, char *);
 			fprintf(stderr, "L%u: can't div %s, stack too short \n", l_num, opcode_error);
 			break;
-		case 10:
-			l_num = va_arg(ag, unsigned int);
-			opcode_error = va_arg(ag, char *);
-			fprintf(stderr, "L%d: Division by 0\n", l_num, opcode_error);
-			break;
 		default:
 			break;
 	}

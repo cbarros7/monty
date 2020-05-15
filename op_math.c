@@ -34,10 +34,6 @@ void divide(stack_t **stack, unsigned int line_num)
 	{
 		others_error(9, line_num, "div");
 	}
-	if (*stack == 0)
-	{
-		others_error(10, line_num, "div")
-	}
 
 	(*stack) = (*stack)->next;
 	div = (*stack)->n / (*stack)->prev->n;
