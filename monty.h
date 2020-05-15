@@ -74,5 +74,6 @@ void swap(stack_t **stack, unsigned int line_number);
 void error_out(unsigned int error_code, ...);
 void others_error(unsigned int error_code, ...);
 void add(stack_t **stack, unsigned int line_num);
+void sub(stack_t **stack, unsigned int line_num);
 
 #endif /* MONTHY */

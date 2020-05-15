@@ -22,6 +22,7 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	/*
