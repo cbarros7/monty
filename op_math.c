@@ -21,7 +21,7 @@ void sub(stack_t **stack, unsigned int line_num)
 }
 
 /**
- * div - Division the top two elements of the stack.
+ * divide - Division the top two elements of the stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_num: Interger representing the line number of of the opcode.
  */
@@ -31,7 +31,15 @@ void divide(stack_t **stack, unsigned int line_num)
 	int div;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		others_error(8, line_num, "div");
+	{
+		printf("L%d: can't div, stack too short\n", line_num);
+		exit(EXIT_FAILURE);
+	}
+	if (*stack == 0)
+	{
+		printf("L%d: division by zero\n", line_num);
+		exit(EXIT_FAILURE);
+	}
 
 	(*stack) = (*stack)->next;
 	div = (*stack)->n / (*stack)->prev->n;
