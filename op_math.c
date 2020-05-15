@@ -31,9 +31,7 @@ void divide(stack_t **stack, unsigned int line_num)
 	int div;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-	{
-		others_error(9, line_num, "div");
-	}
+		others_error(8, line_num, "div");
 
 	(*stack) = (*stack)->next;
 	div = (*stack)->n / (*stack)->prev->n;
