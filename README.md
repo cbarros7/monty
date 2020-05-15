@@ -25,16 +25,22 @@
 ## Table of Contents
 
 * [Resources](#resources)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
+* [Learning Objetives](#learning-objetives)
+  * [General](#general-objetives)  
+* [Requirements](#requirements)
+  * [General](#general-requirements)
+  * [Github](#github)
+* [More Info](#more-info)
+  * [Data Structrures](#data-structures)
+  * [Compilation & Output](#compilation-output)
+  * [Test](#test)
+* [The Monty Language](#monty-language)
+  * [Monty By Code File](#monty-bytecode)
+  * [The Monty Program](#monty-program)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
+
 
 
 
@@ -221,8 +227,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Carlos Barros - [@your_twitter](https://twitter.com/CharlesBrros) - cabar07@hotmail.com
-Wilder Rincon - [@your_twitter](https://twitter.com/wildsrincon) - wildsrincon.developer@gmail.com
+Carlos Barros - [@CharlesBrros](https://twitter.com/CharlesBrros) - cabar07@hotmail.com
+Wilder Rincon - [@wildsrincon](https://twitter.com/wildsrincon) - wildsrincon.developer@gmail.com
 Project Link: [https://github.com/cbarros7/monty](https://github.com/cbarros7/monty)
 
 
@@ -234,4 +240,4 @@ Project Link: [https://github.com/cbarros7/monty](https://github.com/cbarros7/mo
 [license-shield]: https://img.shields.io/github/license/cbarros7/monty.svg?style=flat-square
 [license-url]: https://github.com/cbarros7/monty/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/carlosbarros7,https://www.linkedin.com/in/wilder-de-jesus-rincon-iriarte-51819aa
+[linkedin-url]: https://www.linkedin.com/in/carlosbarros7
