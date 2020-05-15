@@ -23,6 +23,7 @@ void search_func(char *opcode, char *cmd, int l_num, int format)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"div", divide},
 		{NULL, NULL}
 	};
 	/*
