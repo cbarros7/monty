@@ -32,13 +32,11 @@ void divide(stack_t **stack, unsigned int line_num)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
-		printf("L%d: can't div, stack too short\n", line_num);
-		exit(EXIT_FAILURE);
+		others_error(9, line_num, "div");
 	}
 	if (*stack == 0)
 	{
-		printf("L%d: division by zero\n", line_num);
-		exit(EXIT_FAILURE);
+		others_error(10, line_num, "div")
 	}
 
 	(*stack) = (*stack)->next;
